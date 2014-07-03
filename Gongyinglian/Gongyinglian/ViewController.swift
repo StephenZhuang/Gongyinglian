@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-                            
+    
+    @IBOutlet var imageView: UIImageView?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animateWithDuration(0.5, animations: {
+            
+            })
     }
 
     override func didReceiveMemoryWarning() {

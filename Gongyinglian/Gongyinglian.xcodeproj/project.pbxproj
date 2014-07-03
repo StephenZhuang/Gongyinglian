@@ -10,7 +10,6 @@
 		77FF0C961965727C007BDEAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF0C951965727C007BDEAA /* AppDelegate.swift */; };
 		77FF0C981965727C007BDEAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF0C971965727C007BDEAA /* ViewController.swift */; };
 		77FF0C9B1965727C007BDEAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77FF0C991965727C007BDEAA /* Main.storyboard */; };
-		77FF0C9D1965727C007BDEAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77FF0C9C1965727C007BDEAA /* Images.xcassets */; };
 		77FF0CA91965727C007BDEAA /* GongyinglianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF0CA81965727C007BDEAA /* GongyinglianTests.swift */; };
 		77FF0CB61965731F007BDEAA /* Gongying.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FF0CB31965731F007BDEAA /* Gongying.m */; };
 		77FF0CB71965731F007BDEAA /* WebServiceRead.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FF0CB51965731F007BDEAA /* WebServiceRead.m */; };
@@ -19,6 +18,7 @@
 		77FF0D201965747A007BDEAA /* libIsoFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77FF0D0919657479007BDEAA /* libIsoFrame.a */; };
 		77FF0D361965755A007BDEAA /* MJsonData.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FF0D351965755A007BDEAA /* MJsonData.m */; };
 		77FF0D38196576A3007BDEAA /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF0D37196576A3007BDEAA /* ListViewController.swift */; };
+		77FF0D3E19657FAA007BDEAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77FF0D3D19657FAA007BDEAA /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 		77FF0C951965727C007BDEAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77FF0C971965727C007BDEAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77FF0C9A1965727C007BDEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		77FF0C9C1965727C007BDEAA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		77FF0CA21965727C007BDEAA /* GongyinglianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GongyinglianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FF0CA71965727C007BDEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77FF0CA81965727C007BDEAA /* GongyinglianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GongyinglianTests.swift; sourceTree = "<group>"; };
@@ -126,6 +125,7 @@
 		77FF0D351965755A007BDEAA /* MJsonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJsonData.m; sourceTree = "<group>"; };
 		77FF0D37196576A3007BDEAA /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		77FF0D3C19657842007BDEAA /* Gongyinglian-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gongyinglian-Bridging-Header.h"; sourceTree = "<group>"; };
+		77FF0D3D19657FAA007BDEAA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +169,7 @@
 		77FF0C921965727C007BDEAA /* Gongyinglian */ = {
 			isa = PBXGroup;
 			children = (
+				77FF0D3D19657FAA007BDEAA /* Images.xcassets */,
 				77FF0CB21965731F007BDEAA /* Gongying.h */,
 				77FF0CB31965731F007BDEAA /* Gongying.m */,
 				77FF0CB41965731F007BDEAA /* WebServiceRead.h */,
@@ -177,7 +178,6 @@
 				77FF0D37196576A3007BDEAA /* ListViewController.swift */,
 				77FF0C971965727C007BDEAA /* ViewController.swift */,
 				77FF0C991965727C007BDEAA /* Main.storyboard */,
-				77FF0C9C1965727C007BDEAA /* Images.xcassets */,
 				77FF0C931965727C007BDEAA /* Supporting Files */,
 				77FF0D341965755A007BDEAA /* MJsonData.h */,
 				77FF0D351965755A007BDEAA /* MJsonData.m */,
@@ -408,9 +408,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				77FF0D1F1965747A007BDEAA /* ProgressHUD.bundle in Resources */,
+				77FF0D3E19657FAA007BDEAA /* Images.xcassets in Resources */,
 				77FF0D1E1965747A007BDEAA /* README in Resources */,
 				77FF0C9B1965727C007BDEAA /* Main.storyboard in Resources */,
-				77FF0C9D1965727C007BDEAA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +561,7 @@
 					"$(PROJECT_DIR)/Frame",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Gongyinglian/Gongyinglian-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -577,6 +578,7 @@
 					"$(PROJECT_DIR)/Frame",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Gongyinglian/Gongyinglian-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -91,14 +91,15 @@
         NSRange reageend=[s2 rangeOfString:@"</ns:return>"];
         if (reageend.location != NSNotFound) {
             NSString * res = [s2 substringWithRange:NSMakeRange(0,reageend.location) ];
-            if([res hasPrefix:@"["]) {                
-                @try{
-                    if(delegate && [delegate respondsToSelector:mselector]){
-                        [delegate performSelector:mselector withObject:res ];
-                    }
-                }@catch (NSException *e) {
-                    
+            if([res hasPrefix:@"["]) {
+                res=[NSString stringWithFormat:@"{\"data\":%@}" ,res];
+            }
+            @try{
+                if(delegate && [delegate respondsToSelector:mselector]){
+                    [delegate performSelector:mselector withObject:res ];
                 }
+            }@catch (NSException *e) {
+                
             }
         }
        
