@@ -7,6 +7,8 @@
 //
 
 #import "WebServiceRead.h"
+#define DEFAULT_NAMESPACE @"http://pub.webservice.shqj.com"
+#define DEFAULT_URL @"http://117.135.154.87:7777/axis2/services/QJService?wsdl"
 
 @implementation WebServiceRead
 
@@ -23,6 +25,11 @@
         mselector=selecter;
     }
     return self;
+}
+
+- (void)postWithMethodName:(NSString *)methodName params:(NSDictionary *)params
+{
+    [self post:methodName namespace:DEFAULT_NAMESPACE url:DEFAULT_URL params:params];
 }
 
 -(void)post:(NSString*)methodname namespace:(NSString*)namespace url:(NSString *)surl params:(NSDictionary*)params{
@@ -86,7 +93,7 @@
     [[NSMutableString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
      NSRange reagestart=[result rangeOfString:@"<ns:return>"];
     if (reagestart.location != NSNotFound) {
-        NSString *s2 = [result substringFromIndex:reagestart.location+10];
+        NSString *s2 = [result substringFromIndex:reagestart.location+11];
         
         NSRange reageend=[s2 rangeOfString:@"</ns:return>"];
         if (reageend.location != NSNotFound) {

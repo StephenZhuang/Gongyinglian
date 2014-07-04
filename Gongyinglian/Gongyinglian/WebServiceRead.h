@@ -15,9 +15,9 @@
 @property (strong, nonatomic) id delegate;
 @property SEL mselector;
 
-
+- (void)postWithMethodName:(NSString *)methodName params:(NSDictionary *)params;
 -(void)post:(NSString*)methodname namespace:(NSString*)namespace url:(NSString *)surl params:(NSDictionary*)params;
 
 -(void)stop;
-
+-(id)init:(id)ndelegate selecter:(SEL) selecter;
 @end
