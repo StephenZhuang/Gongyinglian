@@ -7,6 +7,7 @@
 //
 
 #import "WebServiceRead.h"
+#import "Frame.h"
 #define DEFAULT_NAMESPACE @"http://pub.webservice.shqj.com"
 #define DEFAULT_URL @"http://117.135.154.87:7777/axis2/services/QJService?wsdl"
 
@@ -17,12 +18,14 @@
 
 @synthesize delegate;
 @synthesize mselector;
+@synthesize showLoading;
 
 -(id)init:(id)ndelegate selecter:(SEL) selecter{
     self=[super init];
     if(self){
         delegate=ndelegate;
         mselector=selecter;
+        showLoading = NO;
     }
     return self;
 }
@@ -33,6 +36,9 @@
 }
 
 -(void)post:(NSString*)methodname namespace:(NSString*)namespace url:(NSString *)surl params:(NSDictionary*)params{
+    if (showLoading) {
+        [ProgressHUD show:@"加载中…"];
+    }
     receivedData=[[NSMutableData alloc]init];
     // 设置我们之后解析XML时用的关键字，与响应报文中Body标签之间的getMobileCodeInfoResult标签对应
     // 创建SOAP消息，内容格式就是网站上提示的请求报文的实体主体部分
@@ -89,6 +95,12 @@
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection{
+    if (showLoading) {
+//        dispatch_time_t t= dispatch_time(DISPATCH_TIME_NOW, 6);
+//        dispatch_after(t, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+//            [ProgressHUD showError:@""];
+//        });
+    }
     NSMutableString* result=
     [[NSMutableString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
      NSRange reagestart=[result rangeOfString:@"<ns:return>"];

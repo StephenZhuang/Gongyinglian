@@ -10,19 +10,60 @@ import UIKit
 
 class ListViewController: UITableViewController {
 
+    var dataArray: NSMutableArray?
+    
     init(style: UITableViewStyle) {
         super.init(style: style)
         // Custom initialization
     }
+    
+    init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController.setNavigationBarHidden(false, animated: true)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.dataArray = NSMutableArray()
+        self.refreshControl.addTarget(self, action: Selector("refreshControlValueChanged"), forControlEvents: .ValueChanged)
+        self.refreshControl!.beginRefreshing()
+        loadData()
+    }
+    
+    func refreshControlValueChanged() {
+        if self.refreshControl.refreshing {
+            loadData()
+        }
+    }
+    
+    func loadData() {
+        var params: NSMutableDictionary = NSMutableDictionary()
+        var dic: NSMutableDictionary = NSMutableDictionary()
+        dic.setObject("com.shqj.webservice.entity.UserKey", forKey: "class")
+        dic.setObject(ToolUtils.shareInstance().user!.key, forKey: "key")
+        let jsonString: NSString = dic.JSONString()
+        params.setObject(jsonString, forKey: "userkey")
+        var webservice: WebServiceRead = WebServiceRead()
+        webservice = WebServiceRead(self , selecter:Selector("webServiceFinished:"))
+        webservice.postWithMethodName("doQueryKc", params: params)
+    }
+    
+    func webServiceFinished(data: NSString) {
+        var dic: NSDictionary = data.objectFromJSONString() as NSDictionary
+        var kcList: QueryKcList = QueryKcList()
+        kcList.build(dic)
+        self.dataArray!.removeAllObjects()
+        self.dataArray!.addObjectsFromArray(kcList.data)
+        self.tableView!.reloadData()
+        
+        if self.refreshControl.refreshing {
+            self.refreshControl.endRefreshing()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,24 +76,25 @@ class ListViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return self.dataArray!.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell : UITableViewCell! = tableView!.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
 
         // Configure the cell...
-
+        var querykc:QueryKc = self.dataArray!.objectAtIndex(indexPath!.row) as QueryKc
+        cell.textLabel.text = querykc.spname?
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSURLConnection *conn;
 @property (strong, nonatomic) NSMutableData *receivedData;
+@property (nonatomic , assign) BOOL showLoading;
 @property (strong, nonatomic) id delegate;
 @property SEL mselector;
 

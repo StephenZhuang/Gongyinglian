@@ -34,9 +34,12 @@
 
 - (void) build:(NSDictionary*)json{
         mclass=[JsonData getJsonString:json key:@"class"]; //固定不用管
-        spcode=[JsonData getJsonString:json key:@"spcode"]; //商品编码
-        spname=[JsonData getJsonString:json key:@"spname"]; //商品名称
-        spcount=[JsonData getJsonString:json key:@"spcount"]; //库存数量
+        spcode=[JsonData getJsonString:json key:@"spcode"];
+                 if([spcode isEqual:[NSNull null]]) spcode = @""; //商品编码
+    spname=[JsonData getJsonString:json key:@"spname"];
+                if([spname isEqual:[NSNull null]]) spname = @"" ; //商品名称
+//        spcount=[JsonData getJsonString:json key:@"spcount"]; //库存数量
+    spcount = [json objectForKey:@"spcount"];
 }
 
 

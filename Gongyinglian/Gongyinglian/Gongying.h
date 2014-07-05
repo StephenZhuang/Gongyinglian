@@ -239,7 +239,7 @@
 	/**
 		库存数量
 	*/
-	@property(retain) NSString *spcount;
+	@property(retain) NSNumber *spcount;
 
 @end
 

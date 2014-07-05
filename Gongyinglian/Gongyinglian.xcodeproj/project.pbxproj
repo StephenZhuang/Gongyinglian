@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		778D0C20196793F800E210AC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 778D0C1F196793F800E210AC /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		778D0C241967A64900E210AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778D0C231967A64900E210AC /* MenuViewController.swift */; };
+		778D0C261967ABCF00E210AC /* ToolUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778D0C251967ABCF00E210AC /* ToolUtils.swift */; };
 		77FF0C961965727C007BDEAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF0C951965727C007BDEAA /* AppDelegate.swift */; };
 		77FF0C981965727C007BDEAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF0C971965727C007BDEAA /* ViewController.swift */; };
 		77FF0C9B1965727C007BDEAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77FF0C991965727C007BDEAA /* Main.storyboard */; };
@@ -32,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		778D0C1E196793F800E210AC /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		778D0C1F196793F800E210AC /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		778D0C231967A64900E210AC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		778D0C251967ABCF00E210AC /* ToolUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolUtils.swift; sourceTree = "<group>"; };
 		77FF0C901965727C007BDEAA /* Gongyinglian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gongyinglian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FF0C941965727C007BDEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77FF0C951965727C007BDEAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +176,8 @@
 		77FF0C921965727C007BDEAA /* Gongyinglian */ = {
 			isa = PBXGroup;
 			children = (
+				778D0C1E196793F800E210AC /* JSONKit.h */,
+				778D0C1F196793F800E210AC /* JSONKit.m */,
 				77FF0D3D19657FAA007BDEAA /* Images.xcassets */,
 				77FF0CB21965731F007BDEAA /* Gongying.h */,
 				77FF0CB31965731F007BDEAA /* Gongying.m */,
@@ -182,6 +191,8 @@
 				77FF0D341965755A007BDEAA /* MJsonData.h */,
 				77FF0D351965755A007BDEAA /* MJsonData.m */,
 				77FF0D3C19657842007BDEAA /* Gongyinglian-Bridging-Header.h */,
+				778D0C231967A64900E210AC /* MenuViewController.swift */,
+				778D0C251967ABCF00E210AC /* ToolUtils.swift */,
 			);
 			path = Gongyinglian;
 			sourceTree = "<group>";
@@ -432,8 +443,11 @@
 				77FF0C961965727C007BDEAA /* AppDelegate.swift in Sources */,
 				77FF0D38196576A3007BDEAA /* ListViewController.swift in Sources */,
 				77FF0D361965755A007BDEAA /* MJsonData.m in Sources */,
+				778D0C261967ABCF00E210AC /* ToolUtils.swift in Sources */,
 				77FF0CB71965731F007BDEAA /* WebServiceRead.m in Sources */,
+				778D0C20196793F800E210AC /* JSONKit.m in Sources */,
 				77FF0CB61965731F007BDEAA /* Gongying.m in Sources */,
+				778D0C241967A64900E210AC /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +651,7 @@
 				77FF0CAE1965727C007BDEAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77FF0CAF1965727C007BDEAA /* Build configuration list for PBXNativeTarget "GongyinglianTests" */ = {
 			isa = XCConfigurationList;
@@ -645,6 +660,7 @@
 				77FF0CB11965727C007BDEAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

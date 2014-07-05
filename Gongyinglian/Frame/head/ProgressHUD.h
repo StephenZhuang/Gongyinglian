@@ -61,5 +61,4 @@
 @property (atomic, strong) UIImageView *image;
 @property (atomic, strong) UILabel *label;
 @property (nonatomic , strong) UITapGestureRecognizer *tap;
-
 @end
