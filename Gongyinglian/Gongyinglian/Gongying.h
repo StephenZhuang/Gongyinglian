@@ -25,12 +25,12 @@
 	/**
 		积分
 	*/
-	@property(retain) NSString *jf;
+	@property(retain) NSNumber *jf;
 
 	/**
 		已兑换积分
 	*/
-	@property(retain) NSString *jfbak;
+	@property(retain) NSNumber *jfbak;
 
 	/**
 		日期
@@ -118,7 +118,7 @@
 	/**
 		数量
 	*/
-	@property(retain) NSString *spcount;
+	@property(retain) NSNumber *spcount;
 
 @end
 
@@ -202,7 +202,7 @@
 	/**
 		数量
 	*/
-	@property(retain) NSString *spcount;
+	@property(retain) NSNumber *spcount;
 
 @end
 

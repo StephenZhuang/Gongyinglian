@@ -1,37 +1,37 @@
 //
-//  ListViewController.swift
+//  IntegrationViewController.swift
 //  Gongyinglian
 //
-//  Created by Stephen Zhuang on 14-7-3.
+//  Created by Stephen Zhuang on 14-7-7.
 //  Copyright (c) 2014年 udows. All rights reserved.
 //
 
 import UIKit
 
-class ListViewController: UITableViewController {
-
+class IntegrationViewController: UITableViewController {
     var dataArray: NSMutableArray?
     
     init(style: UITableViewStyle) {
         super.init(style: style)
         // Custom initialization
     }
-    
+
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController.setNavigationBarHidden(false, animated: true)
-        self.addTitleView(title: "库存", subtitle: "库存查询")
 
+        self.navigationController.setNavigationBarHidden(false, animated: true)
+        self.addTitleView(title: "积分", subtitle: "兑换历史")
+        
         self.dataArray = NSMutableArray()
         self.refreshControl.addTarget(self, action: Selector("refreshControlValueChanged"), forControlEvents: .ValueChanged)
         self.refreshControl!.beginRefreshing()
         loadData()
+
     }
-    
     func refreshControlValueChanged() {
         if self.refreshControl.refreshing {
             loadData()
@@ -47,53 +47,52 @@ class ListViewController: UITableViewController {
         params.setObject(jsonString, forKey: "userkey")
         var webservice: WebServiceRead = WebServiceRead()
         webservice = WebServiceRead(self , selecter:Selector("webServiceFinished:"))
-        webservice.postWithMethodName("doQueryKc", params: params)
+        webservice.postWithMethodName("doQueryJdk", params: params)
     }
     
     func webServiceFinished(data: NSString) {
         var dic: NSDictionary = data.objectFromJSONString() as NSDictionary
-        var kcList: QueryKcList = QueryKcList()
-        kcList.build(dic)
+        var jdkList: QueryJdkList = QueryJdkList()
+        jdkList.build(dic)
         self.dataArray!.removeAllObjects()
-        self.dataArray!.addObjectsFromArray(kcList.data)
+        self.dataArray!.addObjectsFromArray(jdkList.data)
         self.tableView!.reloadData()
         
         if self.refreshControl.refreshing {
             self.refreshControl.endRefreshing()
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // #pragma mark - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
     }
-
+    
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return self.dataArray!.count
     }
-
+    
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
         let cell : GoodsCell! = tableView!.dequeueReusableCellWithIdentifier("cell") as GoodsCell
-
+        
         // Configure the cell...
-        var querykc:QueryKc = self.dataArray!.objectAtIndex(indexPath!.row) as QueryKc
-        cell.nameLabel.text = querykc.spname?
-        cell.codeLabel.text = querykc.spcode?
-        cell.countLabel.text = querykc.spcount?.stringValue
+        var queryjdk:QueryJdk = self.dataArray!.objectAtIndex(indexPath!.row) as QueryJdk
+        cell.nameLabel.text = queryjdk.jf?.stringValue
+        cell.codeLabel.text = queryjdk.jfbak?.stringValue
+        cell.countLabel.text = queryjdk.rq?
         return cell
     }
-    
 
     /*
     // Override to support conditional editing of the table view.

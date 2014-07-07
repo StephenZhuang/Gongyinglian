@@ -10,3 +10,6 @@
 #import "Gongying.h"
 #import "WebServiceRead.h"
 #import "JSONKit.h"
+#import "TitleView.h"
+#import "Ios7QRViewController.h"
+#import "Ios6QRViewController.h"

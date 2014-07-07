@@ -87,7 +87,7 @@
 
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
-
+    [ProgressHUD showError:@"连接失败"];
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{

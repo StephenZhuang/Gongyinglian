@@ -124,8 +124,16 @@
         mdcode=[JsonData getJsonString:json key:@"mdcode"]; //门店编码
         mdname=[JsonData getJsonString:json key:@"mdname"]; //门店名称
         spcode=[JsonData getJsonString:json key:@"spcode"]; //产品code
-        spname=[JsonData getJsonString:json key:@"spname"]; //产品名称
-        spcount=[JsonData getJsonString:json key:@"spcount"]; //数量
+    spname=[JsonData getJsonString:json key:@"spname"]; //产品名称
+    if ([spname isEqual:[NSNull null]]) {
+        spname = @"";
+    }
+    if ([spcode isEqual:[NSNull null]]) {
+        spcode = @"";
+    }
+    
+//        spcount=[JsonData getJsonString:json key:@"spcount"]; //数量
+    spcount = [json objectForKey:@"spcount"];
 }
 
 
@@ -141,8 +149,10 @@
 
 - (void) build:(NSDictionary*)json{
         mclass=[JsonData getJsonString:json key:@"class"]; //固定不用管
-        jf=[JsonData getJsonString:json key:@"jf"]; //积分
-        jfbak=[JsonData getJsonString:json key:@"jfbak"]; //已兑换积分
+        jf = [json objectForKey:@"jf"];
+        jfbak = [json objectForKey:@"jfbak"];
+//        jf=[JsonData getJsonString:json key:@"jf"]; //积分
+//        jfbak=[JsonData getJsonString:json key:@"jfbak"]; //已兑换积分
         rq=[JsonData getJsonString:json key:@"rq"]; //日期
 }
 
@@ -161,7 +171,14 @@
         mclass=[JsonData getJsonString:json key:@"class"]; //固定不用管
         spcode=[JsonData getJsonString:json key:@"spcode"]; //产品code
         spname=[JsonData getJsonString:json key:@"spname"]; //产品名称
-        spcount=[JsonData getJsonString:json key:@"spcount"]; //数量
+    if ([spname isEqual:[NSNull null]]) {
+        spname = @"";
+    }
+    if ([spcode isEqual:[NSNull null]]) {
+        spcode = @"";
+    }
+//        spcount=[JsonData getJsonString:json key:@"spcount"]; //数量
+    spcount = [json objectForKey:@"spcount"];
 }
 
 
