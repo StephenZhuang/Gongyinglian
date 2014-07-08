@@ -121,7 +121,7 @@
     }
     
     // 条码类型 AVMetadataObjectTypeQRCode
-    _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
+    _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode ,AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code, AVMetadataObjectTypeQRCode];
     
     // Preview
     _preview =[AVCaptureVideoPreviewLayer layerWithSession:self.session];

@@ -40,6 +40,7 @@
 		778D0C20196793F800E210AC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 778D0C1F196793F800E210AC /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		778D0C241967A64900E210AC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778D0C231967A64900E210AC /* MenuViewController.swift */; };
 		778D0C261967ABCF00E210AC /* ToolUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778D0C251967ABCF00E210AC /* ToolUtils.swift */; };
+		77912593196B7A200007C28C /* InitConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77912592196B7A200007C28C /* InitConfig.plist */; };
 		77FF0C961965727C007BDEAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF0C951965727C007BDEAA /* AppDelegate.swift */; };
 		77FF0C981965727C007BDEAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF0C971965727C007BDEAA /* ViewController.swift */; };
 		77FF0C9B1965727C007BDEAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77FF0C991965727C007BDEAA /* Main.storyboard */; };
@@ -130,6 +131,7 @@
 		778D0C1F196793F800E210AC /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		778D0C231967A64900E210AC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		778D0C251967ABCF00E210AC /* ToolUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolUtils.swift; sourceTree = "<group>"; };
+		77912592196B7A200007C28C /* InitConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InitConfig.plist; sourceTree = "<group>"; };
 		77FF0C901965727C007BDEAA /* Gongyinglian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gongyinglian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FF0C941965727C007BDEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77FF0C951965727C007BDEAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 		77FF0CB819657479007BDEAA /* Frame */ = {
 			isa = PBXGroup;
 			children = (
+				77912592196B7A200007C28C /* InitConfig.plist */,
 				77FF0CB919657479007BDEAA /* head */,
 				77FF0D0919657479007BDEAA /* libIsoFrame.a */,
 			);
@@ -623,6 +626,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77912593196B7A200007C28C /* InitConfig.plist in Resources */,
 				77156502196A7B3000CF5692 /* zbar-helpicons.png in Resources */,
 				771564FF196A7B3000CF5692 /* pick_bg@2x.png in Resources */,
 				77FF0D1F1965747A007BDEAA /* ProgressHUD.bundle in Resources */,

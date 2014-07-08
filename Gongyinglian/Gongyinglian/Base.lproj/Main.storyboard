@@ -35,13 +35,13 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-60" translatesAutoresizingMaskIntoConstraints="NO" id="fOx-BQ-WdG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon-60" translatesAutoresizingMaskIntoConstraints="NO" id="fOx-BQ-WdG">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="130" y="100" width="60" height="60"/>
                                 </variation>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdc-uv-Yo2">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdc-uv-Yo2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="填写线" translatesAutoresizingMaskIntoConstraints="NO" id="veu-eN-cCo">
@@ -127,9 +127,9 @@
                                 <exclude reference="ryB-Gj-W3d"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="XtD-bO-m4J"/>
                                 <exclude reference="Ewh-0C-ODe"/>
                                 <exclude reference="X8Q-fg-4Ij"/>
-                                <exclude reference="XtD-bO-m4J"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -141,9 +141,9 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
+                                <include reference="XtD-bO-m4J"/>
                                 <include reference="Ewh-0C-ODe"/>
                                 <include reference="X8Q-fg-4Ij"/>
-                                <include reference="XtD-bO-m4J"/>
                             </mask>
                         </variation>
                     </view>
@@ -214,15 +214,15 @@
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
-                                    <mask key="subviews">
-                                        <include reference="v6P-ma-fIV"/>
-                                        <include reference="CBw-tm-1M1"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="udO-Ne-gi0"/>
                                         <include reference="xkd-o4-hpx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="v6P-ma-fIV"/>
+                                        <include reference="CBw-tm-1M1"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -348,6 +348,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="pfP-KS-mO2">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="97" id="IQb-dc-tM6" customClass="GoodsCell" customModule="Gongyinglian" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -486,6 +491,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Ypg-BO-8Qf">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="97" id="6k0-VT-gqz" customClass="GoodsCell" customModule="Gongyinglian" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -609,7 +619,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" verticalHuggingPriority="44" verticalCompressionResistancePriority="44" id="rE5-5Z-Ru6">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <rect key="frame" x="0.0" y="64" width="480" height="568"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="商品编码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0SG-sL-0tJ">
@@ -658,6 +668,11 @@
                                     <include reference="u2k-bR-JpM"/>
                                 </mask>
                             </variation>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="eiq-D8-ETe">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="97" id="vOP-5d-bg9" customClass="GoodsCell" customModule="Gongyinglian" customModuleProvider="target">
