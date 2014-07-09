@@ -801,6 +801,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jiangsu Youdu Software Co. Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jiangsu Youdu Software Co. Ltd";
 				INFOPLIST_FILE = Gongyinglian/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -810,7 +812,9 @@
 					"$(PROJECT_DIR)/Gongyinglian/ZBarSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7407AFAC-D01B-4D8F-91F7-81A386194FD4";
 				SWIFT_OBJC_BRIDGING_HEADER = "Gongyinglian/Gongyinglian-Bridging-Header.h";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -819,6 +823,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jiangsu Youdu Software Co. Ltd";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jiangsu Youdu Software Co. Ltd";
 				INFOPLIST_FILE = Gongyinglian/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -828,7 +834,9 @@
 					"$(PROJECT_DIR)/Gongyinglian/ZBarSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7407AFAC-D01B-4D8F-91F7-81A386194FD4";
 				SWIFT_OBJC_BRIDGING_HEADER = "Gongyinglian/Gongyinglian-Bridging-Header.h";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};

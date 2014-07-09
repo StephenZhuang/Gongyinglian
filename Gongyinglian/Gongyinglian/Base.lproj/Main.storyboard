@@ -133,17 +133,17 @@
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="ryB-Gj-W3d"/>
-                                <include reference="fOx-BQ-WdG"/>
-                                <include reference="cdc-uv-Yo2"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
                             <mask key="constraints">
                                 <include reference="XtD-bO-m4J"/>
                                 <include reference="Ewh-0C-ODe"/>
                                 <include reference="X8Q-fg-4Ij"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ryB-Gj-W3d"/>
+                                <include reference="fOx-BQ-WdG"/>
+                                <include reference="cdc-uv-Yo2"/>
                             </mask>
                         </variation>
                     </view>
@@ -214,15 +214,15 @@
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="udO-Ne-gi0"/>
-                                        <include reference="xkd-o4-hpx"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="v6P-ma-fIV"/>
                                         <include reference="CBw-tm-1M1"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="udO-Ne-gi0"/>
+                                        <include reference="xkd-o4-hpx"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -349,7 +349,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="pfP-KS-mO2">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <rect key="frame" x="0.0" y="183" width="480" height="568"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
@@ -492,7 +492,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Ypg-BO-8Qf">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <rect key="frame" x="0.0" y="183" width="480" height="568"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
@@ -627,7 +627,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                                     <variation key="widthClass=compact" fixedFrame="YES">
-                                        <rect key="frame" x="35" y="6" width="221" height="30"/>
+                                        <rect key="frame" x="35" y="6" width="196" height="30"/>
                                     </variation>
                                     <connections>
                                         <outlet property="delegate" destination="Bwk-Fk-TGx" id="wHj-26-DuE"/>
@@ -636,7 +636,7 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="填写线" translatesAutoresizingMaskIntoConstraints="NO" id="qO8-EO-LfE">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                     <variation key="widthClass=compact" fixedFrame="YES">
-                                        <rect key="frame" x="20" y="26" width="250" height="12"/>
+                                        <rect key="frame" x="20" y="26" width="211" height="12"/>
                                     </variation>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2k-bR-JpM">
@@ -646,7 +646,7 @@
                                     </state>
                                     <state key="highlighted" image="bt_scan_p"/>
                                     <variation key="widthClass=compact" fixedFrame="YES">
-                                        <rect key="frame" x="278" y="8" width="28" height="28"/>
+                                        <rect key="frame" x="253" y="8" width="53" height="38"/>
                                     </variation>
                                     <connections>
                                         <action selector="goToQRImageController" destination="Bwk-Fk-TGx" eventType="touchUpInside" id="4aT-uR-Nef"/>
@@ -670,7 +670,7 @@
                             </variation>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="eiq-D8-ETe">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <rect key="frame" x="0.0" y="822" width="480" height="568"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>

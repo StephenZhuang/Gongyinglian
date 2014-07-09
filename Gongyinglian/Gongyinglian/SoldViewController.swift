@@ -32,7 +32,7 @@ class SoldViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.topView!.frame.size.height = 44
+        self.topView!.frame.size.height = 50
         if isSell {
             self.addTitleView(title: "售出", subtitle: "售出查询")
         } else {
