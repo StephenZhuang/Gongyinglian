@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="i4a-B6-tNf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="i4a-B6-tNf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
@@ -214,15 +214,15 @@
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
-                                    <mask key="subviews">
-                                        <include reference="v6P-ma-fIV"/>
-                                        <include reference="CBw-tm-1M1"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="udO-Ne-gi0"/>
                                         <include reference="xkd-o4-hpx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="v6P-ma-fIV"/>
+                                        <include reference="CBw-tm-1M1"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -309,6 +309,12 @@
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="4Qf-jJ-VIq"/>
+                                <include reference="Njs-Da-YJr"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
                             <mask key="constraints">
                                 <include reference="Gkn-wa-cS0"/>
                                 <include reference="2dr-FE-5TC"/>
@@ -318,12 +324,6 @@
                                 <include reference="SL2-DU-LGT"/>
                                 <include reference="TZY-qE-Ani"/>
                                 <include reference="vYH-H1-puW"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="4Qf-jJ-VIq"/>
-                                <include reference="Njs-Da-YJr"/>
                             </mask>
                         </variation>
                     </view>
