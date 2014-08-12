@@ -47,10 +47,10 @@ class MenuViewController: UIViewController ,UICollectionViewDataSource ,UICollec
         let cell: MenuCell! = collectionView.dequeueReusableCellWithReuseIdentifier("MenuCell", forIndexPath: indexPath) as MenuCell
         switch indexPath.row {
         case 0:
-            cell.contentView.backgroundColor = UIColor.RGBColor(red: 0, green: 156, blue: 171)
+            cell.contentView.backgroundColor = UIColor.RGBColor(red: 255, green: 84, blue: 10)
             cell.titleLabel.text = "库存查询"
         case 1:
-            cell.contentView.backgroundColor = UIColor.RGBColor(red: 226, green: 83, blue: 51)
+            cell.contentView.backgroundColor = UIColor.RGBColor(red: 148, green: 103, blue: 249)
             cell.titleLabel.text = "售出"
         case 2:
             if (ToolUtils.shareInstance().user!.usertype.toInt() == 1) {
@@ -58,12 +58,22 @@ class MenuViewController: UIViewController ,UICollectionViewDataSource ,UICollec
             } else {
                 cell.titleLabel.text = "退货"
             }
-            cell.contentView.backgroundColor = UIColor.RGBColor(red: 0, green: 139, blue: 224)
+            cell.contentView.backgroundColor = UIColor.RGBColor(red: 25, green: 138, blue: 250)
         default:
             cell.contentView.backgroundColor = UIColor.RGBColor(red: 98, green: 203, blue: 17)
             cell.titleLabel.text = "兑换历史"
         }
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView!, viewForSupplementaryElementOfKind kind: String!, atIndexPath indexPath: NSIndexPath!) -> UICollectionReusableView! {
+        var view: UICollectionReusableView?;
+        if (kind == UICollectionElementKindSectionHeader) {
+            view = collectionView!.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "header", forIndexPath: indexPath) as? UICollectionReusableView
+        } else {
+            view = collectionView!.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "footer", forIndexPath: indexPath) as? UICollectionReusableView
+        }
+        return view
     }
     
     func collectionView(collectionView: UICollectionView!, didSelectItemAtIndexPath indexPath: NSIndexPath!) {

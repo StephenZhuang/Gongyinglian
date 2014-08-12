@@ -33,6 +33,7 @@
 		77156509196A7C8F00CF5692 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77156508196A7C8F00CF5692 /* CoreVideo.framework */; };
 		7715650B196A7CA200CF5692 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7715650A196A7CA200CF5692 /* libiconv.dylib */; };
 		7715650D196A7FFF00CF5692 /* qrcode_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7715650C196A7FFF00CF5692 /* qrcode_close@2x.png */; };
+		77428CF6199A2D3700ECD8FC /* GongT.m in Sources */ = {isa = PBXBuildFile; fileRef = 77428CF5199A2D3700ECD8FC /* GongT.m */; };
 		775690FB196A24110040BF01 /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 775690F9196A24110040BF01 /* TitleView.m */; };
 		775690FC196A24110040BF01 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775690FA196A24110040BF01 /* TitleView.xib */; };
 		775690FE196A25800040BF01 /* UIViewController+titleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775690FD196A25800040BF01 /* UIViewController+titleView.swift */; };
@@ -122,6 +123,8 @@
 		77156508196A7C8F00CF5692 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		7715650A196A7CA200CF5692 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		7715650C196A7FFF00CF5692 /* qrcode_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_close@2x.png"; sourceTree = "<group>"; };
+		77428CF4199A2D3700ECD8FC /* GongT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GongT.h; sourceTree = "<group>"; };
+		77428CF5199A2D3700ECD8FC /* GongT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GongT.m; sourceTree = "<group>"; };
 		775690F8196A24110040BF01 /* TitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleView.h; sourceTree = "<group>"; };
 		775690F9196A24110040BF01 /* TitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleView.m; sourceTree = "<group>"; };
 		775690FA196A24110040BF01 /* TitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
@@ -369,6 +372,8 @@
 		77FF0C921965727C007BDEAA /* Gongyinglian */ = {
 			isa = PBXGroup;
 			children = (
+				77428CF4199A2D3700ECD8FC /* GongT.h */,
+				77428CF5199A2D3700ECD8FC /* GongT.m */,
 				771564BE196A7B3000CF5692 /* Ios6QRViewController.h */,
 				771564BF196A7B3000CF5692 /* Ios6QRViewController.m */,
 				771564C0196A7B3000CF5692 /* Ios7QRViewController.h */,
@@ -656,6 +661,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77428CF6199A2D3700ECD8FC /* GongT.m in Sources */,
 				771564B9196A69BB00CF5692 /* MenuCell.swift in Sources */,
 				771564B7196A49BC00CF5692 /* GoodsCell.swift in Sources */,
 				775690FE196A25800040BF01 /* UIViewController+titleView.swift in Sources */,
